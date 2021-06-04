@@ -1,0 +1,22 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+
+<VBox fx:controller="com.netty_chat_client_leonid_zhagaltaev.Controller"
+      xmlns:fx="http://javafx.com/fxml">
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem text="Выход" onAction="#exitAction" />
+        </Menu>
+    </MenuBar>
+    <TextArea fx:id="mainArea" editable="false" VBox.vgrow="ALWAYS" wrapText="true" />
+    <HBox>
+        <TextField fx:id="msgField" HBox.hgrow="ALWAYS" promptText = "Ввод сообщения " onAction="#sendMSGAction"/>
+        <Button text="Отправить сообщение" onAction="#sendMSGAction" />
+    </HBox>
+</VBox>
